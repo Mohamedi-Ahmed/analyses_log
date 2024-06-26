@@ -24,7 +24,7 @@ def retrieve_users(data) :
     users = []
     for entry in data :
         users.append(entry.split(";")[1])
-    return users
+    return list(set(users))
 
 def get_user_from_connexion_hours(data) :
     
